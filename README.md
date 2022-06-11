@@ -1,24 +1,28 @@
 # image-to-ascii
-A simple python script to turn images into ASCII art.
 
+A python script to turn images into ASCII art.
 
-### Usage:
+## Usage
+
 ```bash
-$ python3 image-to-ascii.py <image_file> <max_height> <character_width_to_height_ratio>
+python3 image-to-ascii.py <image_file> <max_height> <character_width_to_height_ratio>
 ```
-**image_file:** An arbitrary image file, ideally of .jpg or .png format.
+
+**image_file:** An arbitrary image file, ideally of .jpg or .png format. This can be a normal path to the file, or the filename (including extension) if it's in the `in` directory.
 
 **max_height:** The desired height of the ASCII art, expressed in characters.
 
 **character_width_to_height_ratio:** The ratio of width/height of the characters that will compose the ASCII art. The font used should be a *monospace* (fixed-width) font. Usually a value of 2 is fine.
 
-### Example:
-```bash
-$ python3 image-to-ascii.py monalisa.jpg 60 2.5
-```
-This will output a file named *monalisa.txt* containing ASCII art 60 characters tall. It was previously determined that the monospace font used to display the ASCII art on github allowed approximately two and a half times as much characters in width as it did in height, hence the ratio of 2.5
+### Example
 
-<pre>
+```bash
+python3 image-to-ascii.py monalisa.jpg 60 2.5
+```
+
+This will output a file named `monalisa.txt` in the `out` directory containing ASCII art 60 characters tall. It was previously determined that the monospace font used to display the ASCII art on github allowed approximately two and a half times as much characters in width as it did in height, hence the ratio of 2.5
+
+```txt
 LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLIIILLIILLLLLLLLLLLLLLLLLLLLL
 rrrrLrLLLrrrrLLLLrrrrrrLLrLLLLLLLLLLLLLLLLLLLLLLrrrrrLLLrrLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLrrrrrrrrrL
 rrrrrrrrrrrrrLLLrrrrLLrLLLLLLLLLLLrrLrrrLrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrLrrrrrrrrLLLrrrrrrrrrrrrrrrrL
@@ -79,4 +83,4 @@ RRRRRRRQQQQRRRRRRRQQRRRRRRRRRRRRRRQRRRRRRRRRRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 RRRRQRRQQRRRRRQQQQRRRRRRRRRQRRQRRRRRRRRRRRQQQQRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQRRQQRRR
 RQRQQQQQQQQQQQQQRRRRRRRRRRRRQQQQQRRRRRRRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQRQQQQQRRR
 RQQRRRQQQQRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRQQQQQQQQRRQQRRQQQQRQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQR
-</pre>
+```
